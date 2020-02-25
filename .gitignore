@@ -32,3 +32,8 @@ build/
 
 ### 어플리케이션 프로퍼티는 올리지 않기
 application.properties
+application-dev.properties
+
+
+## pom.xml
+pom.xml
