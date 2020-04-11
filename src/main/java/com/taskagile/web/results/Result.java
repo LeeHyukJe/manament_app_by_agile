@@ -1,9 +1,11 @@
 package com.taskagile.web.results;
 
+import lombok.extern.java.Log;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.util.Assert;
 
+@Log
 public final class Result {
   private Result() {
   }
@@ -29,6 +31,7 @@ public final class Result {
   }
 
   public static ResponseEntity<ApiResult> failure(String message) {
+    log.info("failure msg"+ResponseEntity.badRequest().body(ApiResult.message(message)));
     return ResponseEntity.badRequest().body(ApiResult.message(message));
   }
 
