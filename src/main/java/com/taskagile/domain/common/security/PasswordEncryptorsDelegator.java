@@ -13,7 +13,6 @@ public class PasswordEncryptorsDelegator implements PasswordEncryptors {
 
   @Override
   public String encrypt(String rawPassword) {
-    //TODO 이 부분 구현하
     return passwordEncoder.encode(rawPassword);
   }
 }
