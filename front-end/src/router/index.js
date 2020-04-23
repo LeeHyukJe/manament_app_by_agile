@@ -1,22 +1,25 @@
 import Vue from 'vue'
-import VueRouter from 'vue-router'
+import Router from 'vue-router'
+import HomePage from '@/views/HomePage'
 import LoginPage from '@/views/LoginPage'
 import RegisterPage from '@/views/RegisterPage'
-Vue.use(VueRouter)
 
-const router = new VueRouter({
+Vue.use(Router)
+
+export default new Router({
   mode: 'history',
   base: process.env.BASE_URL,
   routes: [{
+    path: '/',
+    name: 'home',
+    component: HomePage
+  }, {
     path: '/login',
-    name: 'LoginPage',
+    name: 'login',
     component: LoginPage
-  },
-  {
+  }, {
     path: '/register',
-    name: 'Register',
+    name: 'register',
     component: RegisterPage
   }]
 })
-
-export default router
